@@ -1,0 +1,8 @@
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+
+minimumReleaseAgeExclude:
+  - next
+  - eslint-config-next
+  - "@next/*"

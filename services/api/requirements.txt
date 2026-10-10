@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+scikit-learn
+pandas
+numpy
+joblib
+pytest
+httpx
+sqlalchemy 
+alembic "psycopg[binary]" 
+argon2-cffi 
+pyjwt 
+email-validator
+reportlab

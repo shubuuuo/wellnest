@@ -1,0 +1,10 @@
+ml/data/
+ml/artifacts/
+apps/web/node_modules/
+apps/web/.next/
+apps/web/public/
+services/api/.venv/
+model_store/
+
+docs/
+.env
