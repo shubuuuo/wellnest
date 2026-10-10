@@ -1,0 +1,374 @@
+{
+  "rows_total": 100,
+  "base_rows": 10,
+  "stream_rows": 70,
+  "test_rows": 20,
+  "baseline_accuracy": 0.6,
+  "best_model": "Random Forest",
+  "class_weight": {
+    "0": 1.0,
+    "1": 0.67
+  },
+  "models": [
+    {
+      "name": "SGD Logistic Regression",
+      "mode": "online",
+      "fit_seconds": 0.0,
+      "has_proba": true,
+      "final": {
+        "accuracy": 0.8,
+        "precision": 0.8333,
+        "recall": 0.8333,
+        "f1": 0.8333,
+        "roc_auc": 0.8125,
+        "tn": 6,
+        "fp": 2,
+        "fn": 2,
+        "tp": 10
+      },
+      "warm": {
+        "accuracy": 0.65,
+        "precision": 0.7778,
+        "recall": 0.5833,
+        "f1": 0.6667,
+        "roc_auc": 0.75,
+        "tn": 6,
+        "fp": 2,
+        "fn": 5,
+        "tp": 7
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.125,
+          0.125,
+          0.25,
+          0.25,
+          0.375,
+          0.375,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.1667,
+          0.25,
+          0.25,
+          0.5,
+          0.5,
+          0.8333,
+          0.8333,
+          0.9167,
+          0.9167,
+          1.0,
+          1.0
+        ]
+      },
+      "param": {
+        "name": "alpha",
+        "label": "alpha (regularization)",
+        "value": 0.0001,
+        "default": 0.0001,
+        "min": 1e-06,
+        "max": 0.1,
+        "int": false
+      },
+      "file": "final_sgd_logistic_regression.joblib",
+      "warm_file": "warm_sgd_logistic_regression.joblib"
+    },
+    {
+      "name": "SGD Linear SVM",
+      "mode": "online",
+      "fit_seconds": 0.0,
+      "has_proba": true,
+      "final": {
+        "accuracy": 0.6,
+        "precision": 0.6667,
+        "recall": 0.6667,
+        "f1": 0.6667,
+        "roc_auc": 0.5833,
+        "tn": 4,
+        "fp": 4,
+        "fn": 4,
+        "tp": 8
+      },
+      "warm": {
+        "accuracy": 0.6,
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
+        "roc_auc": 0.625,
+        "tn": 6,
+        "fp": 2,
+        "fn": 6,
+        "tp": 6
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.5,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.6667,
+          1.0
+        ]
+      },
+      "param": {
+        "name": "alpha",
+        "label": "alpha (regularization)",
+        "value": 0.0001,
+        "default": 0.0001,
+        "min": 1e-06,
+        "max": 0.1,
+        "int": false
+      },
+      "file": "final_sgd_linear_svm.joblib",
+      "warm_file": "warm_sgd_linear_svm.joblib"
+    },
+    {
+      "name": "Gaussian Naive Bayes",
+      "mode": "online",
+      "fit_seconds": 0.0,
+      "has_proba": true,
+      "final": {
+        "accuracy": 0.7,
+        "precision": 0.8,
+        "recall": 0.6667,
+        "f1": 0.7273,
+        "roc_auc": 0.9062,
+        "tn": 6,
+        "fp": 2,
+        "fn": 4,
+        "tp": 8
+      },
+      "warm": {
+        "accuracy": 0.8,
+        "precision": 0.9,
+        "recall": 0.75,
+        "f1": 0.8182,
+        "roc_auc": 0.9375,
+        "tn": 7,
+        "fp": 1,
+        "fn": 3,
+        "tp": 9
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.125,
+          0.125,
+          0.25,
+          0.25,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.0833,
+          0.5833,
+          0.5833,
+          0.6667,
+          0.6667,
+          1.0,
+          1.0
+        ]
+      },
+      "param": {
+        "name": "var_smoothing",
+        "label": "var_smoothing",
+        "value": 1e-09,
+        "default": 1e-09,
+        "min": 1e-12,
+        "max": 0.001,
+        "int": false
+      },
+      "file": "final_gaussian_naive_bayes.joblib",
+      "warm_file": "warm_gaussian_naive_bayes.joblib"
+    },
+    {
+      "name": "Neural Network (MLP)",
+      "mode": "online",
+      "fit_seconds": 0.1,
+      "has_proba": true,
+      "final": {
+        "accuracy": 0.8,
+        "precision": 0.8333,
+        "recall": 0.8333,
+        "f1": 0.8333,
+        "roc_auc": 0.8958,
+        "tn": 6,
+        "fp": 2,
+        "fn": 2,
+        "tp": 10
+      },
+      "warm": {
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "roc_auc": 0.8229,
+        "tn": 8,
+        "fp": 0,
+        "fn": 4,
+        "tp": 8
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.125,
+          0.125,
+          0.25,
+          0.25,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.0833,
+          0.5,
+          0.5,
+          0.6667,
+          0.6667,
+          1.0,
+          1.0
+        ]
+      },
+      "param": {
+        "name": "hidden_neurons",
+        "label": "hidden neurons",
+        "value": 32,
+        "default": 32,
+        "min": 4,
+        "max": 128,
+        "int": true
+      },
+      "file": "final_neural_network__mlp.joblib",
+      "warm_file": "warm_neural_network__mlp.joblib"
+    },
+    {
+      "name": "Random Forest",
+      "mode": "batch",
+      "fit_seconds": 0.4,
+      "has_proba": true,
+      "final": {
+        "accuracy": 0.9,
+        "precision": 0.9167,
+        "recall": 0.9167,
+        "f1": 0.9167,
+        "roc_auc": 0.8646,
+        "tn": 7,
+        "fp": 1,
+        "fn": 1,
+        "tp": 11
+      },
+      "warm": {
+        "accuracy": 0.85,
+        "precision": 0.9091,
+        "recall": 0.8333,
+        "f1": 0.8696,
+        "roc_auc": 0.9375,
+        "tn": 7,
+        "fp": 1,
+        "fn": 2,
+        "tp": 10
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.125,
+          0.125,
+          0.25,
+          0.25,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.0,
+          0.9167,
+          0.9167,
+          1.0,
+          1.0
+        ]
+      },
+      "param": {
+        "name": "max_depth",
+        "label": "tree depth",
+        "value": 14,
+        "default": 14,
+        "min": 3,
+        "max": 30,
+        "int": true
+      },
+      "file": "final_random_forest.joblib",
+      "warm_file": null
+    },
+    {
+      "name": "SVM (RBF kernel)",
+      "mode": "batch",
+      "fit_seconds": 0.0,
+      "has_proba": false,
+      "final": {
+        "accuracy": 0.7,
+        "precision": 0.8,
+        "recall": 0.6667,
+        "f1": 0.7273,
+        "roc_auc": 0.8333,
+        "tn": 6,
+        "fp": 2,
+        "fn": 4,
+        "tp": 8
+      },
+      "warm": {
+        "accuracy": 0.75,
+        "precision": 0.8182,
+        "recall": 0.75,
+        "f1": 0.7826,
+        "roc_auc": 0.8333,
+        "tn": 6,
+        "fp": 2,
+        "fn": 3,
+        "tp": 9
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.125,
+          0.125,
+          0.25,
+          0.25,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.0833,
+          0.1667,
+          0.1667,
+          0.5,
+          0.5,
+          1.0,
+          1.0
+        ]
+      },
+      "param": {
+        "name": "C",
+        "label": "C (penalty)",
+        "value": 1.0,
+        "default": 1.0,
+        "min": 0.1,
+        "max": 20.0,
+        "int": false
+      },
+      "file": "final_svm__rbf_kernel.joblib",
+      "warm_file": null
+    }
+  ]
+}
